@@ -414,6 +414,102 @@
             font-size: 0.9rem;
         }
 
+        /* Rules Page Styles */
+        .rules-page {
+            padding-top: 120px;
+            min-height: 100vh;
+        }
+
+        .rules-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(50, 50, 50, 0.7);
+            border-radius: 10px;
+        }
+
+        .rules-header h1 {
+            color: var(--accent);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .rules-header p {
+            font-size: 1.1rem;
+            color: #ddd;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .rule-category {
+            margin-bottom: 40px;
+            background: rgba(40, 40, 40, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .category-header {
+            background: rgba(60, 60, 60, 0.9);
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .category-icon {
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        .category-header h2 {
+            font-size: 1.8rem;
+            color: var(--light);
+        }
+
+        .rules-list-detailed {
+            padding: 20px;
+        }
+
+        .rule-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .rule-item:last-child {
+            border-bottom: none;
+        }
+
+        .rule-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .rule-number {
+            background: var(--accent);
+            color: var(--dark);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .rule-item h3 {
+            color: var(--accent);
+            font-size: 1.3rem;
+        }
+
+        .rule-description {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
         /* Responsive Styles */
         @media (max-width: 992px) {
             .about-content {
@@ -456,6 +552,10 @@
             .hero p {
                 font-size: 1.1rem;
             }
+            
+            .rules-page {
+                padding-top: 100px;
+            }
         }
     </style>
 </head>
@@ -473,171 +573,292 @@
                 </button>
                 <nav id="nav">
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#rules">Rules</a></li>
-                        <li><a href="#join">Join</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="index.html#join">Join</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- Rules Page Content -->
+    <section class="rules-page">
         <div class="container">
-            <div class="hero-content">
-                <h1>Build Nations. Forge Alliances. Shape History.</h1>
-                <p>Experience the ultimate geopolitics and worldbuilding Minecraft server. Create your own nation, establish governments, trade resources, and engage in diplomacy or warfare.</p>
-                <div class="hero-buttons">
-                    <a href="#join" class="btn btn-accent">Join Now</a>
-                    <a href="#about" class="btn">Learn More</a>
-                </div>
+            <div class="rules-header">
+                <h1>Sylvaria Official Rulebook</h1>
+                <p>This is the official rule book for Sylvaria. In this document, you will find the rules intended to keep the server fair and fun for all. If you see anyone breaking these rules, please make a ticket. And also, the admins are not above the rules. If you see a staff member breaking rules, then message the owner.</p>
+                <p>Admins may punish members before they have broken the rules in cases where they feel it's necessary (threatening to grief, or DDoS, or raid the server). Additionally, the length of the punishment is to be determined based on the severity of the rule that has been broken.</p>
+                <p>If you have any complaints or questions about the rules, then make a ticket.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Sylvaria</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Create Your Own Civilization</h3>
-                    <p>Sylvaria is a unique Minecraft server that combines the creative freedom of worldbuilding with the strategic depth of geopolitics. Players can establish their own nations, develop economies, form alliances, and engage in diplomacy or conflict.</p>
-                    <p>Our custom plugins allow for detailed political systems, resource management, and territorial control. Whether you want to build a peaceful trading empire or a military superpower, Sylvaria offers the tools and community to make it happen.</p>
-                    <p>With an active player base and dedicated staff, we've created a living world where your decisions matter and your nation's story unfolds with every action you take.</p>
-                    <a href="#features" class="btn">Explore Features</a>
+            <!-- General Rules -->
+            <div class="rule-category">
+                <div class="category-header">
+                    <div class="category-icon">📜</div>
+                    <h2>1. General Rules</h2>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Minecraft castle build">
+                <div class="rules-list-detailed">
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">1.1</div>
+                            <h3>Respect Everyone</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Treat other players with respect. No harassment, racism, personal attacks, or targeted toxicity. Disagreements happen, but keep them civil.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">1.2</div>
+                            <h3>No Cheating or Exploiting</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Hacked clients, X-ray, dupes, macro scripts, or bug exploits are strictly forbidden.</p>
+                            <p>If you find a glitch, report it, don't abuse it.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">1.3</div>
+                            <h3>Keep Chat Clean</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>No spam, NSFW, or advertising other servers. Memes and jokes are fine, just don't flood the chat.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">1.4</div>
+                            <h3>Follow Staff Instructions</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Admins and moderators keep Sylvaria fair and stable. If a staff member asks you to stop or fix something, listen.</p>
+                            <p>If you disagree, appeal respectfully, not in global chat.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">1.5</div>
+                            <h3>Use Common Sense</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>If you're unsure whether something is allowed, ask a moderator before doing it.</p>
+                            <p>"Loophole behavior" (breaking the spirit of the rule but not the exact wording) still counts as breaking it.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Server Features</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-landmark"></i>
-                    </div>
-                    <h3>Nation Building</h3>
-                    <p>Establish your own nation with custom flags, governments, and laws. Claim territory and build your capital city.</p>
+            <!-- Nations and Politics -->
+            <div class="rule-category">
+                <div class="category-header">
+                    <div class="category-icon">🌍</div>
+                    <h2>2. Nations and Politics</h2>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-handshake"></i>
+                <div class="rules-list-detailed">
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">2.1</div>
+                            <h3>No Snake Claims</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Claiming around empty chunks is not allowed. Also, claiming long columns/rows of chunks is not allowed either.</p>
+                        </div>
                     </div>
-                    <h3>Diplomacy System</h3>
-                    <p>Form alliances, declare wars, establish trade agreements, and engage in complex international relations.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-coins"></i>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">2.2</div>
+                            <h3>Keep Distance</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Don't claim any land too close to an already existing town/nation. Claim at least 10 chunks away from an existing claim, and do not expand your claim within 10 chunks of an existing claim.</p>
+                        </div>
                     </div>
-                    <h3>Economy & Trade</h3>
-                    <p>Custom economy with resource scarcity, trade routes, and global markets. Build wealth through commerce.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">2.3</div>
+                            <h3>Alliances and Treaties</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Alliances and treaties must have mutual consent from all involved nations.</p>
+                            <p>Treaties and War reparations will be enforced by the staff team.</p>
+                        </div>
                     </div>
-                    <h3>Military & Defense</h3>
-                    <p>Raise armies, build fortifications, and develop military strategies to protect your interests.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-book"></i>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">2.4</div>
+                            <h3>Inactivity and Leadership</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Inactive nations may lose land or leadership after a grace period (usually 14–30 days). Staff will transfer the claim to the next in command if the leader is inactive for 14-30 days. And if there isn't anyone to transfer the claim to, then the claim will be deleted.</p>
+                        </div>
                     </div>
-                    <h3>Lore & History</h3>
-                    <p>Document your nation's history, create cultural traditions, and develop a rich backstory for your civilization.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Active Community</h3>
-                    <p>Join a vibrant community of worldbuilders and geopolitics enthusiasts. Regular events and collaborative projects.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Rules Section -->
-    <section class="rules" id="rules">
-        <div class="container">
-            <div class="section-title">
-                <h2>Server Rules</h2>
-            </div>
-            <div class="rules-container">
-                <ul class="rules-list">
-                    <li>
-                        <h3>Respect All Players</h3>
-                        <p>Treat all players with respect regardless of nationality, race, gender, or beliefs. Harassment and hate speech are strictly prohibited.</p>
-                    </li>
-                    <li>
-                        <h3>No Griefing</h3>
-                        <p>Respect other players' builds and territories. Griefing or destroying property without permission is not allowed.</p>
-                    </li>
-                    <li>
-                        <h3>Roleplay Appropriately</h3>
-                        <p>While roleplay is encouraged, keep it appropriate and avoid sensitive real-world topics that may cause discomfort.</p>
-                    </li>
-                    <li>
-                        <h3>No Cheating or Exploits</h3>
-                        <p>Using hacked clients, exploits, or any form of cheating will result in immediate and permanent bans.</p>
-                    </li>
-                    <li>
-                        <h3>Follow Staff Directions</h3>
-                        <p>Respect and follow instructions from server staff. They are here to ensure everyone has an enjoyable experience.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Join Section -->
-    <section class="join" id="join">
-        <div class="container">
-            <div class="section-title">
-                <h2>How to Join</h2>
-            </div>
-            <div class="join-content">
-                <p>Ready to start your nation-building journey? Follow these simple steps to join our server!</p>
-                <div class="join-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Get Minecraft</h3>
-                        <p>Make sure you have Minecraft Java Edition version 1.19 or newer.</p>
+            <!-- Warfare and Conflict -->
+            <div class="rule-category">
+                <div class="category-header">
+                    <div class="category-icon">⚔️</div>
+                    <h2>3. Warfare and Conflict</h2>
+                </div>
+                <div class="rules-list-detailed">
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">3.1</div>
+                            <h3>Declaring War</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Wars must be announced publicly (on Discord or in-game) with a clear reason.</p>
+                            <p>Example: "Border conflict," "Retaliation," or "Resource dispute."</p>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Join Our Discord</h3>
-                        <p>Join our Discord community to stay updated and connect with other players.</p>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">3.2</div>
+                            <h3>War Conduct</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Keep wars strategic and fair.</p>
+                            <p>No exploiting or excessive destruction that leaves the map unusable.</p>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Connect to Server</h3>
-                        <p>Add our server IP: <strong>play.Sylvaria.com</strong> to your multiplayer list.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <h3>Start Playing</h3>
-                        <p>Join the server, read the rules, and begin your nation-building journey!</p>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">3.3</div>
+                            <h3>Combat Rules</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>No combat logging (leaving the server mid-fight).</p>
+                            <p>No killing AFK or clearly non-combatant players.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="join-buttons">
-                    <a href="#" class="btn btn-accent">Join Discord</a>
-                    <a href="#" class="btn">Server Status</a>
+            </div>
+
+            <!-- Building and Territory -->
+            <div class="rule-category">
+                <div class="category-header">
+                    <div class="category-icon">🏗️</div>
+                    <h2>4. Building and Territory</h2>
+                </div>
+                <div class="rules-list-detailed">
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">4.1</div>
+                            <h3>Respect Others' Builds</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Do not build too close to another player's territory without permission. Leave room for expansion and diplomacy.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">4.2</div>
+                            <h3>Building Standards</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Sylvaria values realism; floating boxes and random chaos structures are discouraged.</p>
+                            <p>Fantasy or unique builds are fine if they fit your nation's theme.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">4.3</div>
+                            <h3>Terraforming and Aesthetics</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Terraform responsibly. Large terrain changes should look natural and not ruin nearby areas.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">4.4</div>
+                            <h3>Transport</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Griefing roads, railways, and such will result in punishment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Roleplay and Lore -->
+            <div class="rule-category">
+                <div class="category-header">
+                    <div class="category-icon">🗣️</div>
+                    <h2>5. Roleplay and Lore</h2>
+                </div>
+                <div class="rules-list-detailed">
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">5.1</div>
+                            <h3>Roleplay Tone</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Roleplay is semi-realistic. Magic, gods, or fantasy elements are fine only if they fit Sylvaria's tone and don't break immersion.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">5.2</div>
+                            <h3>References to Real-Life Events</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Lore and roleplay should not reference any real-life events/tragedies. Also, no fascism or extremist RP that mentions or is related to IRL groups.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">5.3</div>
+                            <h3>Media and Propaganda</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Players may create newspapers, speeches, or propaganda, but keep them respectful and non-toxic.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Staff and Enforcement -->
+            <div class="rule-category">
+                <div class="category-header">
+                    <div class="category-icon">⚖️</div>
+                    <h2>6. Staff and Enforcement</h2>
+                </div>
+                <div class="rules-list-detailed">
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">6.1</div>
+                            <h3>Punishments</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Punishments depend on severity: warnings, fines, temporary bans, or permanent bans.</p>
+                            <p>Everything is handled case-by-case.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">6.2</div>
+                            <h3>Appeals</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>If you think a punishment was unfair, appeal respectfully through Discord.</p>
+                            <p>Ranting or flaming in chat will not help your case.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <div class="rule-title">
+                            <div class="rule-number">6.3</div>
+                            <h3>Rule Updates</h3>
+                        </div>
+                        <div class="rule-description">
+                            <p>Rules can evolve. Major changes will be announced on Discord way before the change is implemented.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -660,11 +881,11 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#rules">Rules</a></li>
-                        <li><a href="#join">Join Us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="index.html#join">Join Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
