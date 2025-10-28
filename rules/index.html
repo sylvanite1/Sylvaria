@@ -769,12 +769,6 @@
                 header.style.padding = '15px 0';
             }
         });
-
-        // Remove trailing slash from URL
-        if (window.location.pathname.endsWith('/') && window.location.pathname !== '/') {
-            const newPath = window.location.pathname.slice(0, -1);
-            window.history.replaceState(null, null, newPath);
-        }
     </script>
 </body>
 </html>
