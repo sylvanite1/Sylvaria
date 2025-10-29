@@ -60,22 +60,41 @@
             align-items: center;
         }
 
+        /* Logo Styles */
         .logo {
             display: flex;
             align-items: center;
             gap: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
-
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo:hover .logo-text {
+            color: var(--accent);
+        }
+        
+        .logo:hover .logo-icon {
+            color: var(--light);
+            transform: rotate(15deg);
+        }
+        
         .logo-icon {
             font-size: 2rem;
             color: var(--accent);
+            transition: all 0.3s ease;
         }
-
+        
         .logo-text {
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--light);
             text-shadow: 0 0 10px rgba(233, 196, 106, 0.3);
+            transition: color 0.3s ease;
         }
 
         nav ul {
@@ -395,10 +414,10 @@
     <header id="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
+                <a href="." class="logo">
                     <i class="fas fa-globe-americas logo-icon"></i>
                     <div class="logo-text">SYLVARIA</div>
-                </div>
+                </a>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
