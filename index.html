@@ -62,22 +62,41 @@
             align-items: center;
         }
 
+        /* Logo Styles */
         .logo {
             display: flex;
             align-items: center;
             gap: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
-
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo:hover .logo-text {
+            color: var(--accent);
+        }
+        
+        .logo:hover .logo-icon {
+            color: var(--light);
+            transform: rotate(15deg);
+        }
+        
         .logo-icon {
             font-size: 2rem;
             color: var(--accent);
+            transition: all 0.3s ease;
         }
-
+        
         .logo-text {
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--light);
             text-shadow: 0 0 10px rgba(233, 196, 106, 0.3);
+            transition: color 0.3s ease;
         }
 
         nav ul {
@@ -491,109 +510,6 @@
             color: var(--gray);
         }
 
-        /* FAQ Section */
-        .faq {
-            padding: 80px 0;
-            background: rgba(30, 30, 30, 0.5);
-        }
-        
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background: var(--card-bg);
-            border-radius: 12px;
-            margin-bottom: 15px;
-            border: 1px solid rgba(255,255,255,0.1);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .faq-item:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        }
-        
-        .faq-question {
-            padding: 25px 30px;
-            background: rgba(60, 60, 60, 0.9);
-            cursor: pointer;
-            display: flex;
-            justify-content: between;
-            align-items: center;
-            gap: 15px;
-            transition: background 0.3s ease;
-        }
-        
-        .faq-question:hover {
-            background: rgba(70, 70, 70, 0.9);
-        }
-        
-        .faq-question h3 {
-            color: var(--light);
-            font-size: 1.2rem;
-            margin: 0;
-            flex: 1;
-        }
-        
-        .faq-icon {
-            color: var(--accent);
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .faq-item.active .faq-icon {
-            transform: rotate(45deg);
-        }
-        
-        .faq-answer {
-            padding: 0 30px;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            color: var(--gray);
-            line-height: 1.6;
-        }
-        
-        .faq-item.active .faq-answer {
-            padding: 25px 30px;
-            max-height: 500px;
-        }
-        
-        .faq-answer p {
-            margin-bottom: 15px;
-        }
-        
-        .faq-answer p:last-child {
-            margin-bottom: 0;
-        }
-        
-        .faq-answer ul, .faq-answer ol {
-            margin: 15px 0;
-            padding-left: 20px;
-        }
-        
-        .faq-answer li {
-            margin-bottom: 8px;
-        }
-        
-        .faq-contact {
-            text-align: center;
-            margin-top: 40px;
-            padding: 30px;
-            background: var(--card-bg);
-            border-radius: 12px;
-            border: 1px solid rgba(233, 196, 106, 0.3);
-        }
-        
-        .faq-contact p {
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
-
         /* Footer */
         footer {
             background: var(--darker);
@@ -852,10 +768,10 @@
     <header id="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
+                <a href="." class="logo">
                     <i class="fas fa-globe-americas logo-icon"></i>
                     <div class="logo-text">SYLVARIA</div>
-                </div>
+                </a>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
