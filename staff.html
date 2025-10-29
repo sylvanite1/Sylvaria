@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Team - Sylvaria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Use the same CSS as your main site */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2a9d8f;
+            --primary-dark: #1d7870;
+            --secondary: #264653;
+            --accent: #e9c46a;
+            --accent-dark: #d4af37;
+            --dark: #1a1a1a;
+            --darker: #0f0f0f;
+            --light: #f5f5f5;
+            --gray: #8d99ae;
+            --card-bg: rgba(30, 30, 30, 0.8);
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--darker) 0%, var(--secondary) 100%);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo:hover .logo-text {
+            color: var(--accent);
+        }
+
+        .logo:hover .logo-icon {
+            color: var(--light);
+            transform: rotate(15deg);
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+            text-shadow: 0 0 10px rgba(233, 196, 106, 0.3);
+            transition: color 0.3s ease;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+            background: rgba(233, 196, 106, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Staff Page Styles */
+        .staff-page {
+            padding-top: 120px;
+            min-height: 100vh;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--light);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .staff-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .staff-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .staff-avatar {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .staff-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+
+        .staff-rank {
+            display: inline-block;
+            padding: 6px 18px;
+            background: var(--accent);
+            color: var(--dark);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .staff-name {
+            font-size: 1.5rem;
+            color: var(--light);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .staff-position {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .staff-description {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 60px 0 20px;
+            border-top: 2px solid var(--accent);
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .footer-links i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .footer-description {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--light);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .back-to-home {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: var(--dark);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(233, 196, 106, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(233, 196, 106, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-wrap: wrap;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 15px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .staff-page {
+                padding-top: 100px;
+            }
+            
+            .staff-avatar {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-globe-americas logo-icon"></i>
+                    <div class="logo-text">SYLVARIA</div>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#features">Features</a></li>
+                        <li><a href="/#map">Map</a></li>
+                        <li><a href="/rules">Rules</a></li>
+                        <li><a href="/staff">Staff</a></li>
+                        <li><a href="/#join">Join</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Staff Page Content -->
+    <section class="staff-page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Staff Team</h2>
+                <p>The dedicated team that keeps Sylvaria running smoothly</p>
+            </div>
+
+            <!-- Staff Grid -->
+            <div class="staff-grid">
+                <div class="staff-card">
+                    <div class="staff-avatar">
+                        <img src="https://crafatar.com/renders/body/dab1d7d5-6e36-4bca-b655-beaf3d733686" alt="Owner Minecraft Avatar">
+                    </div>
+                    <div class="staff-rank">Owner</div>
+                    <h3 class="staff-name">Floor</h3>
+                    <p class="staff-position">Server Founder</p>
+                    <p class="staff-description">Give me skyblock coins</p>
+                </div>
+
+                <div class="staff-card">
+                    <div class="staff-avatar">
+                        <img src="https://crafatar.com/renders/body/994026ba-a6b9-4315-ba8a-4ce82c2e19c4" alt="Developer Minecraft Avatar">
+                    </div>
+                    <div class="staff-rank">Developer</div>
+                    <h3 class="staff-name">AceR</h3>
+                    <p class="staff-position">Head Developer</p>
+                    <p class="staff-description">Invincible, Fearless, Sensual, Mysterious, Enchanting, Vigorous, Diligent, Overwhelming, Gorgeous, Passionate, Terrifying, Beautiful, Powerful, Grey Prince Ace.</p>
+                </div>
+
+                <div class="staff-card">
+                    <div class="staff-avatar">
+                        <img src="https://crafatar.com/renders/body/w3x4y5z6-a1b2c3d4-e5f6g7h8-i9j0k1l2" alt="Builder Minecraft Avatar">
+                    </div>
+                    <div class="staff-rank">Builder</div>
+                    <h3 class="staff-name">Flower</h3>
+                    <p class="staff-position">Head Builder</p>
+                    <p class="staff-description">Gooneria</p>
+                </div>
+
+                <div class="staff-card">
+                    <div class="staff-avatar">
+                        <img src="https://crafatar.com/renders/body/ef53bcfd-f99e-450c-b587-88e129762c94" alt="Builder Minecraft Avatar">
+                    </div>
+                    <div class="staff-rank">Helper</div>
+                    <h3 class="staff-name">Emily</h3>
+                    <p class="staff-position">Support Helper</p>
+                    <p class="staff-description">Paki....</p>
+                </div>
+            </div>
+
+            <div class="back-to-home">
+                <a href="/" class="btn">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sylvaria</h3>
+                    <p class="footer-description">The ultimate geopolitics and worldbuilding Minecraft server. Build nations, forge alliances, and shape history with players from around the world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-reddit"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="/#about"><i class="fas fa-info-circle"></i>About</a></li>
+                        <li><a href="/#features"><i class="fas fa-star"></i>Features</a></li>
+                        <li><a href="/rules"><i class="fas fa-book"></i>Rules</a></li>
+                        <li><a href="/staff"><i class="fas fa-users"></i>Staff</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Server Info</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-server"></i>Server Status</a></li>
+                        <li><a href="#"><i class="fas fa-book-open"></i>Player Guide</a></li>
+                        <li><a href="#"><i class="fas fa-plug"></i>Plugins List</a></li>
+                        <li><a href="#"><i class="fas fa-user-shield"></i>Staff Applications</a></li>
+                        <li><a href="#"><i class="fas fa-heart"></i>Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-ticket-alt"></i>Support Ticket</a></li>
+                        <li><a href="#"><i class="fab fa-discord"></i>Discord</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i>Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Sylvaria Minecraft Server. All rights reserved. Minecraft is a trademark of Mojang AB. This server is not affiliated with Mojang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.98)';
+                header.style.padding = '10px 0';
+            } else {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+                header.style.padding = '15px 0';
+            }
+        });
+    </script>
+</body>
+</html>
