@@ -6,7 +6,6 @@
     <title>Staff Team - Sylvaria</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Use the same CSS as your main site */
         * {
             margin: 0;
             padding: 0;
@@ -15,20 +14,20 @@
         }
 
         :root {
-            --primary: #2a9d8f;
-            --primary-dark: #1d7870;
-            --secondary: #264653;
-            --accent: #e9c46a;
-            --accent-dark: #d4af37;
+            --primary: #0BBCCB;
+            --primary-dark: #089AAE;
+            --secondary: #066A78;
+            --accent: #03424D;
+            --accent-dark: #022a32;
             --dark: #1a1a1a;
             --darker: #0f0f0f;
             --light: #f5f5f5;
             --gray: #8d99ae;
-            --card-bg: rgba(30, 30, 30, 0.8);
+            --card-bg: rgba(3, 66, 77, 0.7);
         }
 
         body {
-            background: linear-gradient(135deg, var(--darker) 0%, var(--secondary) 100%);
+            background: linear-gradient(135deg, var(--darker) 0%, var(--accent-dark) 100%);
             color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
@@ -42,7 +41,6 @@
             padding: 0 15px;
         }
 
-        /* Header Styles */
         header {
             background: rgba(26, 26, 26, 0.95);
             backdrop-filter: blur(10px);
@@ -50,8 +48,8 @@
             position: fixed;
             width: 100%;
             z-index: 1000;
-            border-bottom: 2px solid var(--accent);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border-bottom: 2px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(11, 188, 203, 0.2);
         }
 
         .header-content {
@@ -74,7 +72,7 @@
         }
 
         .logo:hover .logo-text {
-            color: var(--accent);
+            color: var(--primary);
         }
 
         .logo:hover .logo-icon {
@@ -84,7 +82,7 @@
 
         .logo-icon {
             font-size: 2rem;
-            color: var(--accent);
+            color: var(--primary);
             transition: all 0.3s ease;
         }
 
@@ -92,7 +90,7 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--light);
-            text-shadow: 0 0 10px rgba(233, 196, 106, 0.3);
+            text-shadow: 0 0 10px rgba(11, 188, 203, 0.3);
             transition: color 0.3s ease;
         }
 
@@ -113,8 +111,8 @@
         }
 
         nav a:hover {
-            color: var(--accent);
-            background: rgba(233, 196, 106, 0.1);
+            color: var(--primary);
+            background: rgba(11, 188, 203, 0.1);
             transform: translateY(-2px);
         }
 
@@ -127,7 +125,6 @@
             cursor: pointer;
         }
 
-        /* Staff Page Styles */
         .staff-page {
             padding-top: 120px;
             min-height: 100vh;
@@ -139,21 +136,21 @@
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--light);
             margin-bottom: 15px;
         }
 
         .section-title p {
             color: var(--gray);
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             max-width: 600px;
             margin: 0 auto;
         }
 
         .staff-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-bottom: 50px;
         }
@@ -164,13 +161,14 @@
             padding: 30px;
             text-align: center;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(11, 188, 203, 0.3);
+            backdrop-filter: blur(10px);
         }
 
         .staff-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(11, 188, 203, 0.2);
         }
 
         .staff-avatar {
@@ -187,14 +185,21 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.3));
+            border-radius: 50%;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .staff-card:hover .staff-avatar img {
+            border-color: var(--primary);
         }
 
         .staff-rank {
             display: inline-block;
-            padding: 6px 18px;
-            background: var(--accent);
-            color: var(--dark);
+            padding: 8px 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--light);
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 600;
@@ -211,7 +216,7 @@
         }
 
         .staff-position {
-            color: var(--accent);
+            color: var(--primary);
             font-size: 1.1rem;
             margin-bottom: 15px;
             font-weight: 500;
@@ -223,11 +228,10 @@
             line-height: 1.6;
         }
 
-        /* Footer */
         footer {
-            background: var(--darker);
+            background: var(--accent-dark);
             padding: 60px 0 20px;
-            border-top: 2px solid var(--accent);
+            border-top: 2px solid var(--primary);
             margin-top: 50px;
         }
 
@@ -239,7 +243,7 @@
         }
 
         .footer-column h3 {
-            color: var(--accent);
+            color: var(--primary);
             margin-bottom: 20px;
             font-size: 1.3rem;
         }
@@ -262,7 +266,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--accent);
+            color: var(--primary);
             transform: translateX(5px);
         }
 
@@ -289,7 +293,7 @@
             justify-content: center;
             width: 40px;
             height: 40px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(11, 188, 203, 0.1);
             border-radius: 50%;
             color: var(--light);
             transition: all 0.3s ease;
@@ -297,7 +301,7 @@
         }
 
         .social-links a:hover {
-            background: var(--accent);
+            background: var(--primary);
             color: var(--dark);
             transform: translateY(-3px);
         }
@@ -320,8 +324,8 @@
             align-items: center;
             gap: 10px;
             padding: 14px 32px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-            color: var(--dark);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--light);
             border: none;
             border-radius: 8px;
             font-size: 1.1rem;
@@ -329,12 +333,12 @@
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(233, 196, 106, 0.3);
+            box-shadow: 0 4px 15px rgba(11, 188, 203, 0.3);
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(233, 196, 106, 0.4);
+            box-shadow: 0 8px 25px rgba(11, 188, 203, 0.4);
         }
 
         @media (max-width: 768px) {
@@ -373,7 +377,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header id="header">
         <div class="container">
             <div class="header-content">
@@ -389,7 +392,6 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/#about">About</a></li>
                         <li><a href="/#features">Features</a></li>
-                        <li><a href="/#map">Map</a></li>
                         <li><a href="/rules">Rules</a></li>
                         <li><a href="/staff">Staff</a></li>
                         <li><a href="/#join">Join</a></li>
@@ -399,7 +401,6 @@
         </div>
     </header>
 
-    <!-- Staff Page Content -->
     <section class="staff-page">
         <div class="container">
             <div class="section-title">
@@ -407,7 +408,6 @@
                 <p>The dedicated team that keeps Sylvaria running smoothly</p>
             </div>
 
-            <!-- Staff Grid -->
             <div class="staff-grid">
                 <div class="staff-card">
                     <div class="staff-avatar">
@@ -476,7 +476,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -526,7 +525,6 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const nav = document.getElementById('nav');
         
@@ -534,7 +532,6 @@
             nav.classList.toggle('active');
         });
         
-        // Header Scroll Effect
         const header = document.getElementById('header');
         
         window.addEventListener('scroll', () => {
