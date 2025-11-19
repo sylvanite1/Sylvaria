@@ -6,7 +6,6 @@
     <title>Sylvaria - Geopolitics Minecraft Server</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -15,22 +14,22 @@
         }
 
         :root {
-            --primary: #2a9d8f;
-            --primary-dark: #1d7870;
-            --secondary: #264653;
-            --accent: #e9c46a;
-            --accent-dark: #d4af37;
+            --primary: #0BBCCB;
+            --primary-dark: #089AAE;
+            --secondary: #066A78;
+            --accent: #03424D;
+            --accent-dark: #022a32;
             --dark: #1a1a1a;
             --darker: #0f0f0f;
             --light: #f5f5f5;
             --gray: #8d99ae;
-            --card-bg: rgba(30, 30, 30, 0.8);
+            --card-bg: rgba(3, 66, 77, 0.7);
             --online: #4CAF50;
             --offline: #f44336;
         }
 
         body {
-            background: linear-gradient(135deg, var(--darker) 0%, var(--secondary) 100%);
+            background: linear-gradient(135deg, var(--darker) 0%, var(--accent-dark) 100%);
             color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
@@ -44,7 +43,6 @@
             padding: 0 15px;
         }
 
-        /* Header Styles */
         header {
             background: rgba(26, 26, 26, 0.95);
             backdrop-filter: blur(10px);
@@ -52,8 +50,8 @@
             position: fixed;
             width: 100%;
             z-index: 1000;
-            border-bottom: 2px solid var(--accent);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border-bottom: 2px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(11, 188, 203, 0.2);
         }
 
         .header-content {
@@ -62,7 +60,6 @@
             align-items: center;
         }
 
-        /* Logo Styles */
         .logo {
             display: flex;
             align-items: center;
@@ -77,7 +74,7 @@
         }
         
         .logo:hover .logo-text {
-            color: var(--accent);
+            color: var(--primary);
         }
         
         .logo:hover .logo-icon {
@@ -87,7 +84,7 @@
         
         .logo-icon {
             font-size: 2rem;
-            color: var(--accent);
+            color: var(--primary);
             transition: all 0.3s ease;
         }
         
@@ -95,7 +92,7 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--light);
-            text-shadow: 0 0 10px rgba(233, 196, 106, 0.3);
+            text-shadow: 0 0 10px rgba(11, 188, 203, 0.3);
             transition: color 0.3s ease;
         }
 
@@ -116,8 +113,8 @@
         }
 
         nav a:hover {
-            color: var(--accent);
-            background: rgba(233, 196, 106, 0.1);
+            color: var(--primary);
+            background: rgba(11, 188, 203, 0.1);
             transform: translateY(-2px);
         }
 
@@ -130,14 +127,13 @@
             cursor: pointer;
         }
 
-        /* Hero Section */
         .hero {
             height: 80vh;
             display: flex;
             align-items: center;
             text-align: center;
             position: relative;
-            padding-top: 100px; /* Increased from 80px to 100px */
+            padding-top: 100px;
         }
 
         .hero-content {
@@ -149,10 +145,9 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
         .hero p {
@@ -167,8 +162,8 @@
             align-items: center;
             gap: 10px;
             padding: 14px 32px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-            color: var(--dark);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--light);
             border: none;
             border-radius: 8px;
             font-size: 1.1rem;
@@ -176,23 +171,23 @@
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(233, 196, 106, 0.3);
+            box-shadow: 0 4px 15px rgba(11, 188, 203, 0.3);
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(233, 196, 106, 0.4);
+            box-shadow: 0 8px 25px rgba(11, 188, 203, 0.4);
         }
 
         .btn-secondary {
             background: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
+            border: 2px solid var(--primary);
+            color: var(--primary);
         }
 
         .btn-secondary:hover {
-            background: var(--accent);
-            color: var(--dark);
+            background: var(--primary);
+            color: var(--light);
         }
 
         .hero-buttons {
@@ -202,7 +197,6 @@
             flex-wrap: wrap;
         }
 
-        /* Stats Section */
         .stats {
             padding: 60px 0;
             background: rgba(30, 30, 30, 0.5);
@@ -221,18 +215,20 @@
             background: var(--card-bg);
             padding: 30px;
             border-radius: 15px;
-            border-left: 4px solid var(--accent);
+            border-left: 4px solid var(--primary);
             transition: transform 0.3s ease;
+            border: 1px solid rgba(11, 188, 203, 0.3);
         }
 
         .stat-card:hover {
             transform: translateY(-5px);
+            border-color: var(--primary);
         }
 
         .stat-number {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--accent);
+            color: var(--primary);
             margin-bottom: 10px;
         }
 
@@ -294,7 +290,7 @@
         }
 
         .player-list::-webkit-scrollbar-thumb {
-            background: var(--accent);
+            background: var(--primary);
             border-radius: 2px;
         }
 
@@ -315,7 +311,6 @@
             100% { opacity: 1; }
         }
 
-        /* About Section */
         .about {
             padding: 80px 0;
         }
@@ -348,7 +343,7 @@
         .about-text h3 {
             font-size: 1.8rem;
             margin-bottom: 20px;
-            color: var(--accent);
+            color: var(--primary);
         }
 
         .about-text p {
@@ -373,7 +368,6 @@
             transform: scale(1.05);
         }
 
-        /* Features Section */
         .features {
             padding: 80px 0;
             background: rgba(30, 30, 30, 0.5);
@@ -391,18 +385,18 @@
             padding: 40px 30px;
             text-align: center;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(11, 188, 203, 0.3);
         }
 
         .feature-card:hover {
             transform: translateY(-10px);
-            border-color: var(--accent);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(11, 188, 203, 0.2);
         }
 
         .feature-icon {
             font-size: 3rem;
-            color: var(--accent);
+            color: var(--primary);
             margin-bottom: 20px;
         }
 
@@ -417,7 +411,6 @@
             line-height: 1.6;
         }
 
-        /* Rules Section */
         .rules {
             padding: 80px 0;
         }
@@ -438,18 +431,20 @@
             border-radius: 12px;
             border-left: 4px solid var(--primary);
             transition: transform 0.3s ease;
+            border: 1px solid rgba(11, 188, 203, 0.3);
         }
 
         .rules-list li:hover {
             transform: translateX(5px);
+            border-color: var(--primary);
         }
 
         .rules-list li:nth-child(even) {
-            border-left-color: var(--accent);
+            border-left-color: var(--secondary);
         }
 
         .rules-list h3 {
-            color: var(--accent);
+            color: var(--primary);
             margin-bottom: 10px;
             font-size: 1.3rem;
         }
@@ -458,7 +453,6 @@
             color: var(--gray);
         }
 
-        /* Join Section */
         .join {
             padding: 80px 0;
             background: rgba(30, 30, 30, 0.5);
@@ -481,20 +475,21 @@
             background: var(--card-bg);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(233, 196, 106, 0.3);
+            border: 1px solid rgba(11, 188, 203, 0.3);
             transition: transform 0.3s ease;
         }
 
         .step:hover {
             transform: translateY(-5px);
+            border-color: var(--primary);
         }
 
         .step-number {
             display: inline-block;
             width: 40px;
             height: 40px;
-            background: var(--accent);
-            color: var(--dark);
+            background: var(--primary);
+            color: var(--light);
             border-radius: 50%;
             line-height: 40px;
             font-weight: bold;
@@ -510,11 +505,10 @@
             color: var(--gray);
         }
 
-        /* Footer */
         footer {
-            background: var(--darker);
+            background: var(--accent-dark);
             padding: 60px 0 20px;
-            border-top: 2px solid var(--accent);
+            border-top: 2px solid var(--primary);
         }
 
         .footer-content {
@@ -525,7 +519,7 @@
         }
 
         .footer-column h3 {
-            color: var(--accent);
+            color: var(--primary);
             margin-bottom: 20px;
             font-size: 1.3rem;
         }
@@ -548,7 +542,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--accent);
+            color: var(--primary);
             transform: translateX(5px);
         }
 
@@ -575,7 +569,7 @@
             justify-content: center;
             width: 40px;
             height: 40px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(11, 188, 203, 0.1);
             border-radius: 50%;
             color: var(--light);
             transition: all 0.3s ease;
@@ -583,7 +577,7 @@
         }
 
         .social-links a:hover {
-            background: var(--accent);
+            background: var(--primary);
             color: var(--dark);
             transform: translateY(-3px);
         }
@@ -597,8 +591,8 @@
         }
 
         .server-ip {
-            background: rgba(233, 196, 106, 0.1);
-            border: 1px solid var(--accent);
+            background: rgba(11, 188, 203, 0.1);
+            border: 1px solid var(--primary);
             padding: 15px;
             border-radius: 8px;
             margin: 20px 0;
@@ -609,9 +603,9 @@
         }
         
         .server-ip:hover {
-            background: rgba(233, 196, 106, 0.2);
+            background: rgba(11, 188, 203, 0.2);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(233, 196, 106, 0.2);
+            box-shadow: 0 5px 15px rgba(11, 188, 203, 0.2);
         }
         
         .server-ip code {
@@ -619,7 +613,7 @@
             padding: 8px 16px;
             border-radius: 5px;
             font-family: monospace;
-            color: var(--accent);
+            color: var(--primary);
             font-size: 1.1rem;
             transition: all 0.3s ease;
         }
@@ -643,7 +637,7 @@
             transition: all 0.3s ease;
             pointer-events: none;
             white-space: nowrap;
-            border: 1px solid var(--accent);
+            border: 1px solid var(--primary);
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             z-index: 10;
         }
@@ -658,7 +652,7 @@
             height: 0;
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
-            border-top: 5px solid var(--accent);
+            border-top: 5px solid var(--primary);
         }
         
         .server-ip:hover .copy-tooltip {
@@ -674,14 +668,13 @@
         .copy-success code {
             color: #4CAF50 !important;
         }
-        /* Loading Animation */
         .loading {
             display: inline-block;
             width: 20px;
             height: 20px;
             border: 3px solid rgba(255,255,255,.3);
             border-radius: 50%;
-            border-top-color: var(--accent);
+            border-top-color: var(--primary);
             animation: spin 1s ease-in-out infinite;
         }
 
@@ -689,7 +682,6 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Responsive Styles */
         @media (max-width: 768px) {
             .header-content {
                 flex-wrap: wrap;
@@ -746,7 +738,6 @@
             }
         }
 
-        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -764,7 +755,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header id="header">
         <div class="container">
             <div class="header-content">
@@ -789,7 +779,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content fade-in">
@@ -812,7 +801,6 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -825,10 +813,8 @@
                         <span id="statusText">Checking server...</span>
                     </div>
                     <div class="server-status" id="serverStatus">
-                        <!-- Status will be populated by JavaScript -->
                     </div>
                     <div class="player-list" id="playerList">
-                        <!-- Player list will be populated by JavaScript -->
                     </div>
                 </div>
                 <div class="stat-card fade-in">
@@ -843,7 +829,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="section-title fade-in">
@@ -865,7 +850,6 @@
         </div>
     </section>
 
-    <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
             <div class="section-title fade-in">
@@ -919,7 +903,6 @@
         </div>
     </section>
 
-    <!-- Rules Section -->
     <section class="rules" id="rules">
         <div class="container">
             <div class="section-title fade-in">
@@ -956,7 +939,6 @@
         </div>
     </section>
 
-    <!-- Join Section -->
     <section class="join" id="join">
         <div class="container">
             <div class="section-title fade-in">
@@ -999,7 +981,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -1049,7 +1030,6 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const nav = document.getElementById('nav');
         
@@ -1057,7 +1037,6 @@
             nav.classList.toggle('active');
         });
         
-        // Header Scroll Effect
         const header = document.getElementById('header');
         
         window.addEventListener('scroll', () => {
@@ -1070,7 +1049,6 @@
             }
         });
 
-        // Smooth Scrolling for Anchor Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1085,13 +1063,11 @@
                         behavior: 'smooth'
                     });
                     
-                    // Close mobile menu if open
                     nav.classList.remove('active');
                 }
             });
         });
 
-        // Server Status API Integration
         async function fetchServerStatus() {
             const onlineCountElement = document.getElementById('onlineCount');
             const statusIndicator = document.getElementById('statusIndicator');
@@ -1100,18 +1076,15 @@
             const playerList = document.getElementById('playerList');
 
             try {
-                // Replace 'play.sylvaria.net' with your actual server IP
                 const response = await fetch('https://api.mcsrvstat.us/2/play.sylvaria.net');
                 const data = await response.json();
 
                 if (data.online) {
-                    // Server is online
                     statusIndicator.className = 'online-indicator';
                     statusText.textContent = 'Server Online';
                     onlineCountElement.innerHTML = data.players.online;
-                    onlineCountElement.style.color = 'var(--accent)';
+                    onlineCountElement.style.color = 'var(--primary)';
 
-                    // Update server status info
                     serverStatus.innerHTML = `
                         <div class="status-online">
                             <i class="fas fa-check-circle"></i>
@@ -1120,7 +1093,6 @@
                         ${data.version ? `<div style="color: var(--gray); font-size: 0.9rem; margin-top: 5px;">${data.version}</div>` : ''}
                     `;
 
-                    // Show player list if available
                     if (data.players.list && data.players.list.length > 0) {
                         playerList.innerHTML = '<div style="color: var(--gray); margin-bottom: 8px;">Online Players:</div>' +
                             data.players.list.map(player => 
@@ -1130,7 +1102,6 @@
                         playerList.innerHTML = '<div style="color: var(--gray); font-style: italic;">No players online</div>';
                     }
                 } else {
-                    // Server is offline
                     statusIndicator.className = 'offline-indicator';
                     statusText.textContent = 'Server Offline';
                     onlineCountElement.innerHTML = '0';
@@ -1161,11 +1132,9 @@
             }
         }
 
-        // Update server status every 30 seconds
         fetchServerStatus();
         setInterval(fetchServerStatus, 30000);
 
-        // Fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1180,7 +1149,6 @@
             });
         }, observerOptions);
 
-        // Observe all fade-in elements
         document.querySelectorAll('.fade-in').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
@@ -1188,7 +1156,6 @@
             observer.observe(el);
         });
 
-        // Click to copy server IP
         const serverIpContainer = document.getElementById('serverIpContainer');
         const serverIpText = document.getElementById('serverIpText');
         const copyTooltip = document.getElementById('copyTooltip');
@@ -1198,12 +1165,10 @@
                 try {
                     await navigator.clipboard.writeText('play.sylvaria.net');
                     
-                    // Visual feedback
                     serverIpContainer.classList.add('copy-success');
                     copyTooltip.textContent = 'Copied!';
                     copyTooltip.style.color = '#4CAF50';
                     
-                    // Reset after 2 seconds
                     setTimeout(() => {
                         serverIpContainer.classList.remove('copy-success');
                         copyTooltip.textContent = 'Click to copy!';
