@@ -6,7 +6,6 @@
     <title>Sylvaria Rules - Official Server Rulebook</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -15,20 +14,20 @@
         }
 
         :root {
-            --primary: #2a9d8f;
-            --primary-dark: #1d7870;
-            --secondary: #264653;
-            --accent: #e9c46a;
-            --accent-dark: #d4af37;
+            --primary: #0BBCCB;
+            --primary-dark: #089AAE;
+            --secondary: #066A78;
+            --accent: #03424D;
+            --accent-dark: #022a32;
             --dark: #1a1a1a;
             --darker: #0f0f0f;
             --light: #f5f5f5;
             --gray: #8d99ae;
-            --card-bg: rgba(30, 30, 30, 0.8);
+            --card-bg: rgba(3, 66, 77, 0.7);
         }
 
         body {
-            background: linear-gradient(135deg, var(--darker) 0%, var(--secondary) 100%);
+            background: linear-gradient(135deg, var(--darker) 0%, var(--accent-dark) 100%);
             color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
@@ -42,7 +41,6 @@
             padding: 0 15px;
         }
 
-        /* Header Styles */
         header {
             background: rgba(26, 26, 26, 0.95);
             backdrop-filter: blur(10px);
@@ -50,8 +48,8 @@
             position: fixed;
             width: 100%;
             z-index: 1000;
-            border-bottom: 2px solid var(--accent);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border-bottom: 2px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(11, 188, 203, 0.2);
         }
 
         .header-content {
@@ -60,7 +58,6 @@
             align-items: center;
         }
 
-        /* Logo Styles */
         .logo {
             display: flex;
             align-items: center;
@@ -75,7 +72,7 @@
         }
         
         .logo:hover .logo-text {
-            color: var(--accent);
+            color: var(--primary);
         }
         
         .logo:hover .logo-icon {
@@ -85,7 +82,7 @@
         
         .logo-icon {
             font-size: 2rem;
-            color: var(--accent);
+            color: var(--primary);
             transition: all 0.3s ease;
         }
         
@@ -93,7 +90,7 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--light);
-            text-shadow: 0 0 10px rgba(233, 196, 106, 0.3);
+            text-shadow: 0 0 10px rgba(11, 188, 203, 0.3);
             transition: color 0.3s ease;
         }
 
@@ -114,8 +111,8 @@
         }
 
         nav a:hover {
-            color: var(--accent);
-            background: rgba(233, 196, 106, 0.1);
+            color: var(--primary);
+            background: rgba(11, 188, 203, 0.1);
             transform: translateY(-2px);
         }
 
@@ -128,7 +125,6 @@
             cursor: pointer;
         }
 
-        /* Rules Page Styles */
         .rules-page {
             padding-top: 120px;
             min-height: 100vh;
@@ -140,11 +136,11 @@
             padding: 30px;
             background: var(--card-bg);
             border-radius: 15px;
-            border: 1px solid rgba(233, 196, 106, 0.3);
+            border: 1px solid rgba(11, 188, 203, 0.3);
         }
 
         .rules-header h1 {
-            color: var(--accent);
+            color: var(--primary);
             font-size: 2.8rem;
             margin-bottom: 20px;
         }
@@ -161,7 +157,7 @@
             background: var(--card-bg);
             border-radius: 15px;
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(11, 188, 203, 0.3);
         }
 
         .category-header {
@@ -170,7 +166,7 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            border-bottom: 2px solid var(--accent);
+            border-bottom: 2px solid var(--primary);
         }
 
         .category-icon {
@@ -206,8 +202,8 @@
         }
 
         .rule-number {
-            background: var(--accent);
-            color: var(--dark);
+            background: var(--primary);
+            color: var(--light);
             width: 35px;
             height: 35px;
             border-radius: 50%;
@@ -220,7 +216,7 @@
         }
 
         .rule-item h3 {
-            color: var(--accent);
+            color: var(--primary);
             font-size: 1.4rem;
             margin-top: 5px;
         }
@@ -249,8 +245,8 @@
             align-items: center;
             gap: 10px;
             padding: 14px 32px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-            color: var(--dark);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--light);
             border: none;
             border-radius: 8px;
             font-size: 1.1rem;
@@ -258,19 +254,18 @@
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(233, 196, 106, 0.3);
+            box-shadow: 0 4px 15px rgba(11, 188, 203, 0.3);
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(233, 196, 106, 0.4);
+            box-shadow: 0 8px 25px rgba(11, 188, 203, 0.4);
         }
 
-        /* Footer */
         footer {
-            background: var(--darker);
+            background: var(--accent-dark);
             padding: 60px 0 20px;
-            border-top: 2px solid var(--accent);
+            border-top: 2px solid var(--primary);
             margin-top: 50px;
         }
 
@@ -282,7 +277,7 @@
         }
 
         .footer-column h3 {
-            color: var(--accent);
+            color: var(--primary);
             margin-bottom: 20px;
             font-size: 1.3rem;
         }
@@ -305,7 +300,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--accent);
+            color: var(--primary);
             transform: translateX(5px);
         }
 
@@ -332,7 +327,7 @@
             justify-content: center;
             width: 40px;
             height: 40px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(11, 188, 203, 0.1);
             border-radius: 50%;
             color: var(--light);
             transition: all 0.3s ease;
@@ -340,7 +335,7 @@
         }
 
         .social-links a:hover {
-            background: var(--accent);
+            background: var(--primary);
             color: var(--dark);
             transform: translateY(-3px);
         }
@@ -353,7 +348,6 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive Styles */
         @media (max-width: 768px) {
             .header-content {
                 flex-wrap: wrap;
@@ -410,7 +404,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header id="header">
         <div class="container">
             <div class="header-content">
@@ -435,7 +428,6 @@
         </div>
     </header>
 
-    <!-- Rules Page Content -->
     <section class="rules-page">
         <div class="container">
             <div class="rules-header">
@@ -445,7 +437,6 @@
                 <p>If you have any complaints or questions about the rules, then make a ticket.</p>
             </div>
 
-            <!-- General Rules -->
             <div class="rule-category">
                 <div class="category-header">
                     <div class="category-icon">📜</div>
@@ -503,7 +494,6 @@
                 </div>
             </div>
 
-            <!-- Nations and Politics -->
             <div class="rule-category">
                 <div class="category-header">
                     <div class="category-icon">🌍</div>
@@ -550,7 +540,6 @@
                 </div>
             </div>
 
-            <!-- Warfare and Conflict -->
             <div class="rule-category">
                 <div class="category-header">
                     <div class="category-icon">⚔️</div>
@@ -590,7 +579,6 @@
                 </div>
             </div>
 
-            <!-- Building and Territory -->
             <div class="rule-category">
                 <div class="category-header">
                     <div class="category-icon">🏗️</div>
@@ -637,7 +625,6 @@
                 </div>
             </div>
 
-            <!-- Roleplay and Lore -->
             <div class="rule-category">
                 <div class="category-header">
                     <div class="category-icon">🗣️</div>
@@ -674,7 +661,6 @@
                 </div>
             </div>
 
-            <!-- Staff and Enforcement -->
             <div class="rule-category">
                 <div class="category-header">
                     <div class="category-icon">⚖️</div>
@@ -719,7 +705,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -769,7 +754,6 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const nav = document.getElementById('nav');
         
@@ -777,7 +761,6 @@
             nav.classList.toggle('active');
         });
         
-        // Header Scroll Effect
         const header = document.getElementById('header');
         
         window.addEventListener('scroll', () => {
