@@ -197,8 +197,16 @@
         .staff-avatar img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            transition: all 0.3s ease;
+        }
+
+        .staff-card:hover .staff-avatar img {
+            transform: scale(1.05);
+            border-color: var(--primary-dark);
         }
 
         .staff-rank {
@@ -380,6 +388,17 @@
                 height: 140px;
             }
         }
+
+        .avatar-loading {
+            background: linear-gradient(45deg, var(--accent), var(--secondary));
+            animation: pulse-bg 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-bg {
+            0% { opacity: 0.7; }
+            50% { opacity: 0.4; }
+            100% { opacity: 0.7; }
+        }
     </style>
 </head>
 <body>
@@ -417,7 +436,7 @@
             <div class="staff-grid">
                 <div class="staff-card">
                     <div class="staff-avatar">
-                        <img src="https://crafatar.com/renders/body/dab1d7d5-6e36-4bca-b655-beaf3d733686" alt="Owner Minecraft Avatar">
+                        <img src="https://vzge.me/bust/160/dab1d7d5-6e36-4bca-b655-beaf3d733686" alt="Floor Minecraft Avatar" loading="lazy">
                     </div>
                     <div class="staff-rank">Owner</div>
                     <h3 class="staff-name">Floor</h3>
@@ -427,7 +446,7 @@
 
                 <div class="staff-card">
                     <div class="staff-avatar">
-                        <img src="https://crafatar.com/renders/body/994026ba-a6b9-4315-ba8a-4ce82c2e19c4" alt="Developer Minecraft Avatar">
+                        <img src="https://vzge.me/bust/160/994026ba-a6b9-4315-ba8a-4ce82c2e19c4" alt="AceR Minecraft Avatar" loading="lazy">
                     </div>
                     <div class="staff-rank">Developer</div>
                     <h3 class="staff-name">AceR</h3>
@@ -437,42 +456,52 @@
 
                 <div class="staff-card">
                     <div class="staff-avatar">
-                        <img src="https://crafatar.com/renders/body/a1cde472-5e64-4561-b95a-b9b44837a103" alt="Builder Minecraft Avatar">
+                        <img src="https://vzge.me/bust/160/a1cde472-5e64-4561-b95a-b9b44837a103" alt="Flower Minecraft Avatar" loading="lazy">
                     </div>
                     <div class="staff-rank">Builder</div>
                     <h3 class="staff-name">Flower</h3>
                     <p class="staff-position">Head Builder</p>
-                    <p class="staff-description">Gooneria</p>
+                    <p class="staff-description">Creations: End Arena, Jungle Arena, Desert Arena, Custom End and further miscellaneous builds across spawn</p>
                 </div>
 
                 <div class="staff-card">
                     <div class="staff-avatar">
-                        <img src="https://crafatar.com/renders/body/c311848e-20d4-496c-a6b9-9c014593ddf3" alt="Builder Minecraft Avatar">
+                        <img src="https://vzge.me/bust/160/7bab858a-09f0-4683-aaf9-29d5885023b7" alt="Joey Minecraft Avatar" loading="lazy">
                     </div>
                     <div class="staff-rank">Builder</div>
-                    <h3 class="staff-name">Goose</h3>
+                    <h3 class="staff-name">Joey</h3>
                     <p class="staff-position">Support Builder</p>
-                    <p class="staff-description">Map maker extraordinaire, probably LT3 idk bro</p>
+                    <p class="staff-description">Creations: Miscellaneous builds across spawn</p>
                 </div>
 
                 <div class="staff-card">
                     <div class="staff-avatar">
-                        <img src="https://crafatar.com/renders/body/46c81103-423e-48fa-80c4-9eda3d43b0ff" alt="Builder Minecraft Avatar">
+                        <img src="https://vzge.me/bust/160/1b78e1ce-e834-4bd6-95a3-47545015c93c" alt="Wetbed Minecraft Avatar" loading="lazy">
                     </div>
                     <div class="staff-rank">Builder</div>
-                    <h3 class="staff-name">Sakdel</h3>
+                    <h3 class="staff-name">Wetbed</h3>
                     <p class="staff-position">Support Builder</p>
-                    <p class="staff-description">Crusalis asshole, definitely LT1 energy radiating from him</p>
+                    <p class="staff-description">Creations: Miscellaneous builds across spawn</p>
                 </div>
 
                 <div class="staff-card">
                     <div class="staff-avatar">
-                        <img src="https://crafatar.com/renders/body/ef53bcfd-f99e-450c-b587-88e129762c94" alt="Builder Minecraft Avatar">
+                        <img src="https://vzge.me/bust/160/fa8a3f37-329c-45bc-a4eb-acf2e156137b" alt="Andro Minecraft Avatar" loading="lazy">
                     </div>
-                    <div class="staff-rank">Helper</div>
+                    <div class="staff-rank">Builder</div>
+                    <h3 class="staff-name">Andro</h3>
+                    <p class="staff-position">Support Builder</p>
+                    <p class="staff-description">Creations: Spruce and Oak Mini and Desert Arena</p>
+                </div>
+
+                <div class="staff-card">
+                    <div class="staff-avatar">
+                        <img src="https://vzge.me/bust/160/ef53bcfd-f99e-450c-b587-88e129762c94" alt="Justa Minecraft Avatar" loading="lazy">
+                    </div>
+                    <div class="staff-rank">Builder</div>
                     <h3 class="staff-name">Justa</h3>
                     <p class="staff-position">Support Builder</p>
-                    <p class="staff-description">Paki....</p>
+                    <p class="staff-description">Creations: Swamp Mini Build, Jungle Arena, Snow Mage Tower and futher contributions towars custom end</p>
                 </div>
             </div>
 
@@ -548,6 +577,33 @@
                 header.style.background = 'rgba(26, 26, 26, 0.95)';
                 header.style.padding = '15px 0';
             }
+        });
+
+        // Enhanced avatar loading with vzge.me bust API
+        document.addEventListener('DOMContentLoaded', function() {
+            const avatarImages = document.querySelectorAll('.staff-avatar img');
+            
+            // Add loading animation to avatars
+            avatarImages.forEach(img => {
+                const avatarContainer = img.parentElement;
+                avatarContainer.classList.add('avatar-loading');
+                
+                img.addEventListener('load', function() {
+                    avatarContainer.classList.remove('avatar-loading');
+                });
+                
+                img.addEventListener('error', function() {
+                    avatarContainer.classList.remove('avatar-loading');
+                    // Fallback to Crafatar if vzge.me bust fails
+                    const uuid = this.src.split('/').pop();
+                    this.src = `https://crafatar.com/avatars/${uuid}?size=160&overlay`;
+                    
+                    // If Crafatar also fails, use placeholder
+                    this.addEventListener('error', function() {
+                        this.src = `https://via.placeholder.com/160/03424D/0BBCCB?text=${this.alt.split(' ')[0]}`;
+                    });
+                });
+            });
         });
     </script>
 </body>
