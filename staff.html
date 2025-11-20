@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Team - Sylvaria</title>
+    
+    <!-- Discord Embed Meta Tags -->
+    <meta property="og:title" content="Sylvaria Staff Team">
+    <meta property="og:description" content="Meet the dedicated team that keeps Sylvaria running smoothly. Our experienced staff ensures fair gameplay and an amazing community experience.">
+    <meta property="og:image" content="https://sylvaria.net/images/sylvaria-banner.jpg">
+    <meta property="og:url" content="https://sylvaria.net/staff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sylvaria">
+    <meta name="theme-color" content="#0BBCCB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sylvaria Staff Team">
+    <meta name="twitter:description" content="Meet the dedicated team that keeps Sylvaria running smoothly.">
+    <meta name="twitter:image" content="https://sylvaria.net/images/sylvaria-banner.jpg">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -136,21 +150,21 @@
         }
 
         .section-title h2 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: var(--light);
             margin-bottom: 15px;
         }
 
         .section-title p {
             color: var(--gray);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto;
         }
 
         .staff-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-bottom: 50px;
         }
@@ -161,14 +175,13 @@
             padding: 30px;
             text-align: center;
             transition: all 0.3s ease;
-            border: 1px solid rgba(11, 188, 203, 0.3);
-            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .staff-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-10px);
             border-color: var(--primary);
-            box-shadow: 0 15px 30px rgba(11, 188, 203, 0.2);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
         }
 
         .staff-avatar {
@@ -185,20 +198,13 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.3));
-            border-radius: 50%;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .staff-card:hover .staff-avatar img {
-            border-color: var(--primary);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
         }
 
         .staff-rank {
             display: inline-block;
-            padding: 8px 20px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 6px 18px;
+            background: var(--primary);
             color: var(--light);
             border-radius: 20px;
             font-size: 0.9rem;
