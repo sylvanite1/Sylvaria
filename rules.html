@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sylvaria Rules - Official Server Rulebook</title>
+    <title>Staff Team - Sylvaria</title>
     
     <!-- Discord Embed Meta Tags -->
-    <meta property="og:title" content="Sylvaria Official Rules">
-    <meta property="og:description" content="Read the official Sylvaria rulebook. Learn about our community guidelines, nation policies, warfare rules, and building standards.">
+    <meta property="og:title" content="Sylvaria Staff Team">
+    <meta property="og:description" content="Meet the dedicated team that keeps Sylvaria running smoothly. Our experienced staff ensures fair gameplay and an amazing community experience.">
     <meta property="og:image" content="https://sylvaria.net/images/sylvaria-banner.jpg">
-    <meta property="og:url" content="https://sylvaria.net/rules">
+    <meta property="og:url" content="https://sylvaria.net/staff">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Sylvaria">
     <meta name="theme-color" content="#0BBCCB">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sylvaria Official Rules">
-    <meta name="twitter:description" content="Read the official Sylvaria rulebook.">
+    <meta name="twitter:title" content="Sylvaria Staff Team">
+    <meta name="twitter:description" content="Meet the dedicated team that keeps Sylvaria running smoothly.">
     <meta name="twitter:image" content="https://sylvaria.net/images/sylvaria-banner.jpg">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -80,26 +80,26 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-        
+
         .logo:hover {
             transform: scale(1.05);
         }
-        
+
         .logo:hover .logo-text {
             color: var(--primary);
         }
-        
+
         .logo:hover .logo-icon {
             color: var(--light);
             transform: rotate(15deg);
         }
-        
+
         .logo-icon {
             font-size: 2rem;
             color: var(--primary);
             transition: all 0.3s ease;
         }
-        
+
         .logo-text {
             font-size: 1.8rem;
             font-weight: 700;
@@ -139,141 +139,107 @@
             cursor: pointer;
         }
 
-        .rules-page {
+        .staff-page {
             padding-top: 120px;
             min-height: 100vh;
         }
 
-        .rules-header {
+        .section-title {
             text-align: center;
-            margin-bottom: 40px;
-            padding: 30px;
-            background: var(--card-bg);
-            border-radius: 15px;
-            border: 1px solid rgba(11, 188, 203, 0.3);
+            margin-bottom: 50px;
         }
 
-        .rules-header h1 {
-            color: var(--primary);
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-
-        .rules-header p {
-            font-size: 1.1rem;
-            color: var(--gray);
-            max-width: 900px;
-            margin: 0 auto 15px;
-        }
-
-        .rule-category {
-            margin-bottom: 40px;
-            background: var(--card-bg);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .category-header {
-            background: rgba(60, 60, 60, 0.9);
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border-bottom: 2px solid var(--primary);
-        }
-
-        .category-icon {
-            font-size: 2rem;
-        }
-
-        .category-header h2 {
-            font-size: 1.8rem;
+        .section-title h2 {
+            font-size: 2.5rem;
             color: var(--light);
-        }
-
-        .rules-list-detailed {
-            padding: 30px;
-        }
-
-        .rule-item {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .rule-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .rule-title {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
             margin-bottom: 15px;
         }
 
-        .rule-number {
-            background: var(--primary);
-            color: var(--light);
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .staff-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .staff-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .staff-avatar {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            font-size: 1rem;
-            flex-shrink: 0;
         }
 
-        .rule-item h3 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-top: 5px;
-        }
-
-        .rule-description {
-            color: var(--gray);
-            line-height: 1.7;
-            margin-left: 50px;
-        }
-
-        .rule-description p {
-            margin-bottom: 10px;
-        }
-
-        .rule-description p:last-child {
-            margin-bottom: 0;
-        }
-
-        .back-to-home {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 32px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: var(--light);
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
+        .staff-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
             transition: all 0.3s ease;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(11, 188, 203, 0.3);
         }
 
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(11, 188, 203, 0.4);
+        .staff-card:hover .staff-avatar img {
+            transform: scale(1.05);
+            border-color: var(--primary-dark);
+        }
+
+        .staff-rank {
+            display: inline-block;
+            padding: 6px 18px;
+            background: var(--primary);
+            color: var(--light);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .staff-name {
+            font-size: 1.5rem;
+            color: var(--light);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .staff-position {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .staff-description {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         footer {
@@ -362,6 +328,33 @@
             font-size: 0.9rem;
         }
 
+        .back-to-home {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--light);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(11, 188, 203, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(11, 188, 203, 0.4);
+        }
+
         @media (max-width: 768px) {
             .header-content {
                 flex-wrap: wrap;
@@ -386,34 +379,25 @@
                 display: block;
             }
             
-            .rules-page {
+            .staff-page {
                 padding-top: 100px;
             }
             
-            .rules-header h1 {
-                font-size: 2.2rem;
+            .staff-avatar {
+                width: 140px;
+                height: 140px;
             }
-            
-            .category-header {
-                padding: 15px;
-            }
-            
-            .category-header h2 {
-                font-size: 1.5rem;
-            }
-            
-            .rules-list-detailed {
-                padding: 20px;
-            }
-            
-            .rule-title {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .rule-description {
-                margin-left: 0;
-            }
+        }
+
+        .avatar-loading {
+            background: linear-gradient(45deg, var(--accent), var(--secondary));
+            animation: pulse-bg 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-bg {
+            0% { opacity: 0.7; }
+            50% { opacity: 0.4; }
+            100% { opacity: 0.7; }
         }
     </style>
 </head>
@@ -442,38 +426,87 @@
         </div>
     </header>
 
-    <section class="rules-page">
+    <section class="staff-page">
         <div class="container">
-            <div class="rules-header">
-                <h1>Sylvaria Official Rulebook</h1>
-                <p>This is the official rule book for Sylvaria. In this document, you will find the rules intended to keep the server fair and fun for all. If you see anyone breaking these rules, please make a ticket. And also, the admins are not above the rules. If you see a staff member breaking rules, then message the owner.</p>
-                <p>Admins may punish members before they have broken the rules in cases where they feel it's necessary (threatening to grief, or DDoS, or raid the server). Additionally, the length of the punishment is to be determined based on the severity of the rule that has been broken.</p>
-                <p>If you have any complaints or questions about the rules, then make a ticket.</p>
+            <div class="section-title">
+                <h2>Meet Our Staff Team</h2>
+                <p>The dedicated team that keeps Sylvaria running smoothly</p>
             </div>
 
-            <!-- Rest of the rules content remains exactly the same -->
-            <div class="rule-category">
-                <div class="category-header">
-                    <div class="category-icon">📜</div>
-                    <h2>1. General Rules</h2>
-                </div>
-                <div class="rules-list-detailed">
-                    <!-- All rule items remain exactly the same -->
-                    <div class="rule-item">
-                        <div class="rule-title">
-                            <div class="rule-number">1.1</div>
-                            <h3>Respect Everyone</h3>
-                        </div>
-                        <div class="rule-description">
-                            <p>Treat other players with respect. No harassment, racism, personal attacks, or targeted toxicity. Disagreements happen, but keep them civil.</p>
-                        </div>
+            <div class="staff-grid">
+                <div class="staff-card">
+                    <div class="staff-avatar">
+                        <img src="https://vzge.me/bust/160/dab1d7d5-6e36-4bca-b655-beaf3d733686" alt="Floor Minecraft Avatar" loading="lazy">
                     </div>
-                    <!-- ... rest of rules content ... -->
+                    <div class="staff-rank">Owner</div>
+                    <h3 class="staff-name">Floor</h3>
+                    <p class="staff-position">Server Founder</p>
+                    <p class="staff-description">Give me skyblock coins</p>
+                </div>
+
+                <div class="staff-card">
+                    <div class="staff-avatar">
+                        <img src="https://vzge.me/bust/160/994026ba-a6b9-4315-ba8a-4ce82c2e19c4" alt="AceR Minecraft Avatar" loading="lazy">
+                    </div>
+                    <div class="staff-rank">Developer</div>
+                    <h3 class="staff-name">AceR</h3>
+                    <p class="staff-position">Head Developer</p>
+                    <p class="staff-description">Invincible, Fearless, Sensual, Mysterious, Enchanting, Vigorous, Diligent, Overwhelming, Gorgeous, Passionate, Terrifying, Beautiful, Powerful, Grey Prince Ace.</p>
+                </div>
+
+                <div class="staff-card">
+                    <div class="staff-avatar">
+                        <img src="https://vzge.me/bust/160/a1cde472-5e64-4561-b95a-b9b44837a103" alt="Flower Minecraft Avatar" loading="lazy">
+                    </div>
+                    <div class="staff-rank">Builder</div>
+                    <h3 class="staff-name">Flower</h3>
+                    <p class="staff-position">Head Builder</p>
+                    <p class="staff-description">Creations: End Arena, Jungle Arena, Desert Arena, Custom End and further miscellaneous builds across spawn</p>
+                </div>
+
+                <div class="staff-card">
+                    <div class="staff-avatar">
+                        <img src="https://vzge.me/bust/160/7bab858a-09f0-4683-aaf9-29d5885023b7" alt="Joey Minecraft Avatar" loading="lazy">
+                    </div>
+                    <div class="staff-rank">Builder</div>
+                    <h3 class="staff-name">Joey</h3>
+                    <p class="staff-position">Support Builder</p>
+                    <p class="staff-description">Creations: Miscellaneous builds across spawn</p>
+                </div>
+
+                <div class="staff-card">
+                    <div class="staff-avatar">
+                        <img src="https://vzge.me/bust/160/1b78e1ce-e834-4bd6-95a3-47545015c93c" alt="Wetbed Minecraft Avatar" loading="lazy">
+                    </div>
+                    <div class="staff-rank">Builder</div>
+                    <h3 class="staff-name">Wetbed</h3>
+                    <p class="staff-position">Support Builder</p>
+                    <p class="staff-description">Creations: Miscellaneous builds across spawn</p>
+                </div>
+
+                <div class="staff-card">
+                    <div class="staff-avatar">
+                        <img src="https://vzge.me/bust/160/fa8a3f37-329c-45bc-a4eb-acf2e156137b" alt="Andro Minecraft Avatar" loading="lazy">
+                    </div>
+                    <div class="staff-rank">Builder</div>
+                    <h3 class="staff-name">Andro</h3>
+                    <p class="staff-position">Support Builder</p>
+                    <p class="staff-description">Creations: Spruce and Oak Mini and Desert Arena</p>
+                </div>
+
+                <div class="staff-card">
+                    <div class="staff-avatar">
+                        <img src="https://vzge.me/bust/160/ef53bcfd-f99e-450c-b587-88e129762c94" alt="Justa Minecraft Avatar" loading="lazy">
+                    </div>
+                    <div class="staff-rank">Builder</div>
+                    <h3 class="staff-name">Justa</h3>
+                    <p class="staff-position">Support Builder</p>
+                    <p class="staff-description">Creations: Swamp Mini Build, Jungle Arena, Snow Mage Tower and futher contributions towars custom end</p>
                 </div>
             </div>
 
             <div class="back-to-home">
-                <a href="." class="btn">Back to Home</a>
+                <a href="/" class="btn">Back to Home</a>
             </div>
         </div>
     </section>
@@ -494,11 +527,11 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="."><i class="fas fa-home"></i>Home</a></li>
-                        <li><a href="#about"><i class="fas fa-info-circle"></i>About</a></li>
-                        <li><a href="#features"><i class="fas fa-star"></i>Features</a></li>
-                        <li><a href="rules"><i class="fas fa-book"></i>Rules</a></li>
-                        <li><a href="#join"><i class="fas fa-play"></i>Join Us</a></li>
+                        <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="/#about"><i class="fas fa-info-circle"></i>About</a></li>
+                        <li><a href="/#features"><i class="fas fa-star"></i>Features</a></li>
+                        <li><a href="/rules"><i class="fas fa-book"></i>Rules</a></li>
+                        <li><a href="/staff"><i class="fas fa-users"></i>Staff</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -544,6 +577,33 @@
                 header.style.background = 'rgba(26, 26, 26, 0.95)';
                 header.style.padding = '15px 0';
             }
+        });
+
+        // Enhanced avatar loading with vzge.me bust API
+        document.addEventListener('DOMContentLoaded', function() {
+            const avatarImages = document.querySelectorAll('.staff-avatar img');
+            
+            // Add loading animation to avatars
+            avatarImages.forEach(img => {
+                const avatarContainer = img.parentElement;
+                avatarContainer.classList.add('avatar-loading');
+                
+                img.addEventListener('load', function() {
+                    avatarContainer.classList.remove('avatar-loading');
+                });
+                
+                img.addEventListener('error', function() {
+                    avatarContainer.classList.remove('avatar-loading');
+                    // Fallback to Crafatar if vzge.me bust fails
+                    const uuid = this.src.split('/').pop();
+                    this.src = `https://crafatar.com/avatars/${uuid}?size=160&overlay`;
+                    
+                    // If Crafatar also fails, use placeholder
+                    this.addEventListener('error', function() {
+                        this.src = `https://via.placeholder.com/160/03424D/0BBCCB?text=${this.alt.split(' ')[0]}`;
+                    });
+                });
+            });
         });
     </script>
 </body>
